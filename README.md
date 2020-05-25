@@ -34,6 +34,17 @@ The resulting `query` would be:
 SELECT 'Hello World' as message
 ```
 
+In `bar.sql` lets try including `foo.sql`:
+
+```sql
+SELECT * FROM ({% include 'foo.sql' %}) as t1
+```
+
+The rendered SQL would be:
+```sql
+SELECT * FROM (SELECT 'Hello World' as message) as t1
+```
+
 ## Command Line Interface
 
 The Python interface makes sense at runtime, but for development the CLI is more convenient.
@@ -52,13 +63,13 @@ sql foo.sql msg='Hello World'
 pip install sql-ninja
 ```
 
-or add to `requirements.txt`
+Or add to `requirements.txt`
 
 ```txt
 sql-ninja
 ```
 
-or add to `setup.py`
+Or add to `setup.py`
 
 ```python
 setup(
