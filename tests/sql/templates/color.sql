@@ -1,0 +1,2 @@
+SELECT
+    '{{"red"}}' as color

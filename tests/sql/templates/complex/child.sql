@@ -1,0 +1,1 @@
+SELECT 'bar' as child
