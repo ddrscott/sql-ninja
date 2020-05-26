@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sql-ninja',
-    version='0.1.1',
+    version='0.1.2',
     author='Scott Pierce',
     author_email='ddrscott@gmail.com',
     description='SQL + Jinja Templates Done Right™',

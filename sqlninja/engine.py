@@ -36,7 +36,7 @@ def render(name: str, jinja_env: Environment=None, **context):
     if jinja_env is None:
         jinja_env = default_jinja_env()
 
-    if context is None:
+    if not context:
         context = default_jinja_context
 
     for path in jinja_env.loader.searchpath:
