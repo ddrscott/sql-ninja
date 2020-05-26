@@ -7,7 +7,7 @@ from sqlninja import engine
     allow_extra_args=True,
 ))
 @click.argument('src')
-@click.option('--template_path', default='sql/templates', help='Where SQL templates are located')
+@click.option('--template_path', default='sql/templates', help='Base directory where SQL templates are located. Defaults to `sql/templates`')
 @click.pass_context
 def cli(ctx, src, template_path):
 

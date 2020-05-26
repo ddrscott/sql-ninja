@@ -49,7 +49,20 @@ SELECT * FROM (SELECT 'Hello World' as message) as t1
 
 The Python interface makes sense at runtime, but for development the CLI is more convenient.
 
-So see the resulting SQL we can try:
+The library installs a CLI script: `sql`
+
+```sh
+$ sql --help
+Usage: sql [OPTIONS] SRC
+
+Options:
+--template_path TEXT  Base directory where SQL templates are located.
+Defaults to `sql/templates`
+
+--help                Show this message and exit.
+```
+
+To see the resulting SQL we can try:
 
 ```sh
 sql foo.sql msg='Hello World'
