@@ -38,6 +38,8 @@ def render(name: str, jinja_env: Environment=None, **context):
 
     if not context:
         context = default_jinja_context
+    else:
+        context = {**context, **default_jinja_context}
 
     for path in jinja_env.loader.searchpath:
         name = name.replace(path, '')
