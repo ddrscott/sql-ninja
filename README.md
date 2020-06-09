@@ -15,6 +15,9 @@ In your project create a directory name `sql/templates` to manage you SQL files:
         └── bar.sql
 ```
 
+Templates are also search for from the current working directory and will have priority over
+files in `sql/templates`.
+
 An example `foo.sql` might be:
 
 ```sql
@@ -91,6 +94,24 @@ setup(
     ]
 ```
 
+## Docker
+
+Docker users can pull directly from `ddrscott/sql-ninja`
+
+```sh
+docker run --rm -v $PWD:/app -w /app ddrscott/sql-ninja sample.sql
+#            ^   ^            ^      ^                  ^
+#            |   |            |      |                  |
+#            |   |            |      |                  + the template
+#            |   |            |      |
+#            |   |            |      + the image
+#            |   |            |
+#            |   |            + start in /app path
+#            |   |            
+#            |   + volume mount current path to /app
+#            |
+#            + remove container when complete
+```
 
 ## Contributing
 

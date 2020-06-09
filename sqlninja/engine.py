@@ -18,7 +18,7 @@ def default_jinja_env(template_path: str = None):
         template_path = DEFAULT_TEMPLATE_PATH
 
     return Environment(
-        loader=FileSystemLoader(template_path),
+        loader=FileSystemLoader([os.getcwd(), template_path]),
         autoescape=select_autoescape(['sql'])
     )
 
