@@ -2,10 +2,10 @@
 
 SQL + Jinja Done Right™
 
-This project is a thing wrapper around [Jinja](https://jinja.palletsprojects.com/) templates to help
+This project is a thin wrapper around [Jinja](https://jinja.palletsprojects.com/) templates to help
 manage the generation of SQL.
 
-In your project create a directory name `sql/templates` to manage you SQL files:
+In your project create a directory name `sql/templates` to manage your SQL files:
 
 ```sh
 .
@@ -15,7 +15,7 @@ In your project create a directory name `sql/templates` to manage you SQL files:
         └── bar.sql
 ```
 
-Templates are also search for from the current working directory and will have priority over
+Templates are also search from the current working directory and will have priority over
 files in `sql/templates`.
 
 An example `foo.sql` might be:
